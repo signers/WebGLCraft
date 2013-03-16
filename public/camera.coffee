@@ -1,3 +1,5 @@
+THREE = require './lib/Three'
+
 MouseEvent =
     isLeftButton: (event) -> event.which == 1
     isRightButton: (event) -> event.which == 3
@@ -87,5 +89,3 @@ class Controls
 
 exports.MouseEvent = MouseEvent
 exports.Controls = Controls
-
-

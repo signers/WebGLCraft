@@ -1,6 +1,7 @@
 # Imports
-{ MouseEvent } = require './camera'
+{ MouseEvent, Controls } = require './camera'
 
+THREE = require './lib/Three'
 {Object3D, Matrix4, Scene, Mesh, WebGLRenderer, PerspectiveCamera} = THREE
 {CubeGeometry, PlaneGeometry, MeshLambertMaterial, MeshNormalMaterial} = THREE
 {AmbientLight, DirectionalLight, PointLight, Ray, Vector3, Vector2} = THREE
@@ -191,8 +192,8 @@ class Floor
 class Game
     constructor: ->
         @rad = CubeSize
-        @width = window.innerWidth
-        @height = window.innerHeight
+        @width = window?.innerWidth
+        @height = window?.innerHeight
         @geo = @createGrassGeometry()
         @cubeBlocks = @createBlocksGeometry()
         @selectCubeBlock 'cobblestone'
@@ -622,7 +623,8 @@ class Instructions
 
 
 
-window.init_web_app = ->
+# window.init_web_app = ->
+module.exports = ->
     $("#blocks").hide()
     $('#instructions').hide()
     $(document).bind "contextmenu", -> false
