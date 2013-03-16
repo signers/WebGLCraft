@@ -2,6 +2,8 @@
 { MouseEvent, Controls } = require './camera'
 CollisionUtils = require './collision'
 
+Detector = require './lib/Detector'
+
 THREE = require './lib/Three'
 {Object3D, Matrix4, Scene, Mesh, WebGLRenderer, PerspectiveCamera} = THREE
 {CubeGeometry, PlaneGeometry, MeshLambertMaterial, MeshNormalMaterial} = THREE
