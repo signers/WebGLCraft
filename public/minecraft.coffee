@@ -1,10 +1,13 @@
 # Imports
+{ MouseEvent } = require './camera'
+
 {Object3D, Matrix4, Scene, Mesh, WebGLRenderer, PerspectiveCamera} = THREE
 {CubeGeometry, PlaneGeometry, MeshLambertMaterial, MeshNormalMaterial} = THREE
 {AmbientLight, DirectionalLight, PointLight, Ray, Vector3, Vector2} = THREE
 {MeshLambertMaterial, MeshNormalMaterial, Projector} = THREE
 {Texture, UVMapping, RepeatWrapping, RepeatWrapping, NearestFilter} = THREE
 {LinearMipMapLinearFilter, ClampToEdgeWrapping, Clock} = THREE
+
 
 vec = (x, y, z) -> new Vector3 x, y, z
 

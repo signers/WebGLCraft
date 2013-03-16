@@ -82,5 +82,10 @@ class Controls
         @updateLook()
         return
 
-window.MouseEvent = MouseEvent
-window.Controls = Controls
+#window.MouseEvent = MouseEvent
+#window.Controls = Controls
+
+exports.MouseEvent = MouseEvent
+exports.Controls = Controls
+
+
