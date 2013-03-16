@@ -3,6 +3,7 @@
 CollisionUtils = require './collision'
 
 Detector = require './lib/Detector'
+ImprovedNoise = require './lib/ImprovedNoise'
 
 THREE = require './lib/Three'
 {Object3D, Matrix4, Scene, Mesh, WebGLRenderer, PerspectiveCamera} = THREE
