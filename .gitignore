@@ -12,3 +12,5 @@ db
 ## Build
 *.gem
 
+node_modules
+
