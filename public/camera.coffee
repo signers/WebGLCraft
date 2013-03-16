@@ -1,5 +1,6 @@
-THREE = require './lib/Three'
-{ assoc } = require './coreExtensions'
+$ = require 'jquery'
+THREE = require 'three'
+{ assoc } = require './coreExtensions.coffee'
 
 MouseEvent =
     isLeftButton: (event) -> event.which == 1

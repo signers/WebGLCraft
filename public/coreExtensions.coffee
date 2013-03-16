@@ -1,4 +1,4 @@
-{ patch } = require './lib/rbcoffee'
+{ patch } = require './lib/rbcoffee.coffee'
 
 patch Number,
     mod: (arg) ->

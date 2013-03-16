@@ -1,17 +1,18 @@
 # Imports
-{ MouseEvent, Controls } = require './camera'
-CollisionUtils = require './collision'
+$ = require 'jquery'
+Detector = require 'detector'
+ImprovedNoise = require 'improved-noise'
 
-Detector = require './lib/Detector'
-ImprovedNoise = require './lib/ImprovedNoise'
-
-THREE = require './lib/Three'
+THREE = require 'three'
 {Object3D, Matrix4, Scene, Mesh, WebGLRenderer, PerspectiveCamera} = THREE
 {CubeGeometry, PlaneGeometry, MeshLambertMaterial, MeshNormalMaterial} = THREE
 {AmbientLight, DirectionalLight, PointLight, Ray, Vector3, Vector2} = THREE
 {MeshLambertMaterial, MeshNormalMaterial, Projector} = THREE
 {Texture, UVMapping, RepeatWrapping, RepeatWrapping, NearestFilter} = THREE
 {LinearMipMapLinearFilter, ClampToEdgeWrapping, Clock} = THREE
+
+{ MouseEvent, Controls } = require './camera.coffee'
+CollisionUtils = require './collision.coffee'
 
 
 vec = (x, y, z) -> new Vector3 x, y, z

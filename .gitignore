@@ -13,4 +13,4 @@ db
 *.gem
 
 node_modules
-
+bundle.js
