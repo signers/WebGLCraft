@@ -3,9 +3,10 @@
  * @author mr.doob / http://mrdoob.com/
  */
 
-var THREE = THREE || {};
+if(typeof self === 'undefined') var self = {};
 
-if ( ! self.Int32Array ) {
+var THREE = THREE || {};
+if (! self.Int32Array ) {
 
 	self.Int32Array = Array;
 	self.Float32Array = Array;
