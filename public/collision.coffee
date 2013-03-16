@@ -12,4 +12,4 @@ CollisionUtils =
             return false unless collides
         return true
 
-window.CollisionUtils = CollisionUtils
+module.exports = CollisionUtils

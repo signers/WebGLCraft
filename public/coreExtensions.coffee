@@ -1,3 +1,5 @@
+{ patch } = require './lib/rbcoffee'
+
 patch Number,
     mod: (arg) ->
         return @ % arg if @ >= 0
@@ -16,6 +18,6 @@ patch Number,
     toDegrees: ->  (@ * 180) / Math.PI
 
 
-window.assoc = (o, i) ->
+exports.assoc = (o, i) ->
     (o[k] = v) for k, v of i
     return o

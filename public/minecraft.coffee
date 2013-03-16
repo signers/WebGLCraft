@@ -1,5 +1,6 @@
 # Imports
 { MouseEvent, Controls } = require './camera'
+CollisionUtils = require './collision'
 
 THREE = require './lib/Three'
 {Object3D, Matrix4, Scene, Mesh, WebGLRenderer, PerspectiveCamera} = THREE

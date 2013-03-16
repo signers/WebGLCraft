@@ -1,4 +1,5 @@
 THREE = require './lib/Three'
+{ assoc } = require './coreExtensions'
 
 MouseEvent =
     isLeftButton: (event) -> event.which == 1

@@ -23,4 +23,4 @@ class MethodTracer
             puts id
         return @
 
-window.MethodTracer = MethodTracer
+exports = MethodTracer
