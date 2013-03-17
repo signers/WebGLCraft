@@ -4,8 +4,8 @@
   "description": "WebGLCraft that was browserified to demonstrate source map capabilities.",
   "main": "WebGLCraft.js",
   "scripts": {
-    "build": "coffee build",
-    "start": "coffee app"
+    "build": "coffee build.coffee",
+    "start": "coffee app.coffee"
   },
   "repository": {
     "type": "git",
