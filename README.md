@@ -21,6 +21,16 @@ Installing
     git clone git://github.com/thlorenz/WebGLCraft.git && cd WebGLCraft 
     npm install
 
+Coffeescript Support in Chrome DevTools
+----
+
+### BreakPoint hit
+![breakpoint](https://github.com/thlorenz/WebGLCraft/raw/master/assets/devtools-breakpoint.png)
+
+### Opening Source Files
+![open](https://github.com/thlorenz/WebGLCraft/raw/master/assets/devtools-open.png)
+
+
 Compiling
 ----
 
