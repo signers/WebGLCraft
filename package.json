@@ -13,10 +13,10 @@
   },
   "homepage": "https://github.com/thlorenz/WebGLCraft",
   "dependencies": {
-    "browserify": "git://github.com/thlorenz/node-browserify.git",
     "coffeeify": "~0.1.0",
     "browserify-shim": "~2.0.3",
-    "ecstatic": "~0.4.1"
+    "ecstatic": "~0.4.1",
+    "browserify": "~2.7.0"
   },
   "devDependencies": {},
   "keywords": [],
