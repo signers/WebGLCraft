@@ -17,5 +17,5 @@ bfy.transform(coffeeify)
 
 bfy
   .require(require.resolve('./public/main'), entry: true)
-  .bundle({ debug: false })
+  .bundle({ debug: true })
   .pipe(fs.createWriteStream  path.join(__dirname, 'public', 'bundle.js'))

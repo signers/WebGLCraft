@@ -628,8 +628,8 @@ class Instructions
 
 
 
-# window.init_web_app = ->
 module.exports = ->
+    console.log 'initializing minecraft'
     $("#blocks").hide()
     $('#instructions').hide()
     $(document).bind "contextmenu", -> false
@@ -639,4 +639,3 @@ module.exports = ->
         new BlockSelection(game).insert()
         game.start()
     new Instructions(startGame).insert()
-
