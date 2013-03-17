@@ -26,11 +26,11 @@ Compiling
 
 To compile, run:
 
-    coffee build 
+    npm run build 
 
 If you wanna see the game locally, you need python, and you run 
 
-    cake server
+    npm start 
 
 which simply runs
 

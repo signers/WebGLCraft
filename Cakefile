@@ -9,10 +9,6 @@ system = (name, args) ->
     proc.on        'exit', (status) ->
         process.exit(1) if status != 0
 
-task 'server', 'Serve the current filesystem. Needed for loading textures from fs.
-Require python installed.', ->
-    system 'python', '-m SimpleHTTPServer'.split(' ')
-
 task 'spec', "runs unit tests", ->
     imports = ['spec/jasmine-node/lib', 'spec/javascripts', 'public/bundle.js']
     process.env["NODE_PATH"] += ":" + imports.join ":"

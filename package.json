@@ -4,7 +4,8 @@
   "description": "WebGLCraft that was browserified to demonstrate source map capabilities.",
   "main": "WebGLCraft.js",
   "scripts": {
-    "test": "node-trap test/*.js"
+    "build": "coffee build",
+    "start": "python -m SimpleHTTPServer"
   },
   "repository": {
     "type": "git",
