@@ -5,7 +5,7 @@
   "main": "WebGLCraft.js",
   "scripts": {
     "build": "coffee build",
-    "start": "python -m SimpleHTTPServer"
+    "start": "coffee app"
   },
   "repository": {
     "type": "git",
@@ -15,7 +15,8 @@
   "dependencies": {
     "browserify": "git://github.com/thlorenz/node-browserify.git",
     "coffeeify": "~0.1.0",
-    "browserify-shim": "~2.0.3"
+    "browserify-shim": "~2.0.3",
+    "ecstatic": "~0.4.1"
   },
   "devDependencies": {},
   "keywords": [],

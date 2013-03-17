@@ -28,16 +28,11 @@ To compile, run:
 
     npm run build 
 
-If you wanna see the game locally, you need python, and you run 
+If you wanna see the game locally, you ~~need python~~, and you run 
 
     npm start 
 
-which simply runs
-
-
-    python -m SimpleHTTPServer
-
-enabling you to open the game on [http://localhost:8000/public/](http://localhost:8000/public/).
+enabling you to open the game on [http://localhost:8000/](http://localhost:8000/).
 
 
 To run the tests, simply run: 
