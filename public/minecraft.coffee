@@ -594,7 +594,7 @@ class Instructions
         return
 
     ribbon: ->
-        '<a href="https://github.com/danielribeiro/WebGLCraft" target="_blank">
+        '<a href="https://github.com/thlorenz/WebGLCraft" target="_blank">
         <img style="position: fixed; top: 0; right: 0; border: 0;"
         src="http://s3.amazonaws.com/github/ribbons/forkme_right_darkblue_121621.png"
         alt="Fork me on GitHub"></a>'
@@ -606,7 +606,8 @@ class Instructions
         legal = "<div>Not affiliated with Mojang. #{minecraft} is a trademark of Mojang</div>"
         hnimage = '<img class="alignnone" title="hacker news" src="http://1.gravatar.com/blavatar/96c849b03aefaf7ef9d30158754f0019?s=20" alt="" width="20" height="20" />'
         hnlink = "<div>Comment on  #{hnimage} <a href='http://news.ycombinator.com/item?id=3376620'  target='_blank'>Hacker News</a></div>"
-        @domElement.append legal + hnlink + @ribbon()
+        browserified = "<div><p><span style='fontWeight: bold'>Note:</span> This is the browserified version with preserved sourcemaps.</p><p>Click Alt-Cmd-J to debug the original CoffeeScript.</p><p>(needs sourcemaps enabled in your browser)</p></div>"
+        @domElement.append legal + hnlink + browserified + @ribbon()
         @domElement.show()
 
     lines: ->
