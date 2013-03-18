@@ -16,4 +16,5 @@ bfy = shim(browserify(), {
   .transform(coffeeify)
   .require(require.resolve('./public/main'), entry: true)
   .bundle({ debug: true })
+  .pipe((require 'show-stream-progress')())
   .pipe(fs.createWriteStream  path.join(__dirname, 'public', 'bundle.js'))
