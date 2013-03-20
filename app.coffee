@@ -1,6 +1,6 @@
-http     =  require('http')
-ecstatic =  require('ecstatic')
-build    =  require('./build')
+http     =  require 'http'
+ecstatic =  require 'ecstatic'
+build    =  require './build'
 
 staticServer = ecstatic(root: __dirname + "/public", autoIndex: true )
 
