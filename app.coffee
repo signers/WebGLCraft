@@ -13,6 +13,5 @@ http.createServer(
 console.log "Listening on http://localhost:8000"
 
 serveBundle = (req, res) ->
-  console.log('piping bundle')
   res.setHeader('Content-Type', 'application/javascript')
   build().pipe(res)

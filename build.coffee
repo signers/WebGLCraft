@@ -1,13 +1,15 @@
-coffeeify  =  require 'caching-coffeeify'
-mold       =  require 'mold-source-map'
-browserify =  require 'browserify'
-shim       =  require 'browserify-shim'
-fs         =  require 'fs'
-path       =  require 'path'
-bundlePath =  path.join __dirname, 'public', 'bundle.js'
+coffeeify    =  require 'caching-coffeeify'
+mold         =  require 'mold-source-map'
+browserify   =  require 'browserify'
+shim         =  require 'browserify-shim'
+fs           =  require 'fs'
+path         =  require 'path'
+showProgress =  require 'show-stream-progress'
+through      =  require 'through'
+bundlePath   =  path.join __dirname, 'public', 'bundle.js'
 
 build = module.exports = (report = false) ->
-  bundle = shim(browserify(), {
+  shim(browserify(), {
       jquery              :  path :  './public/jquery/jquery-1.7.1.js',   exports :  '$'
       'jquery-hotkeys'    :  path :  './public/lib/jquery.hotkeys.js',    exports :  null, depends   :  { jquery :  '$' }
       'jquery-mousewheel' :  path :  './public/lib/jquery.mousewheel.js', exports :  null, depends   :  { jquery :  '$' }
@@ -18,10 +20,8 @@ build = module.exports = (report = false) ->
     .transform(coffeeify)
     .require(require.resolve('./public/main'), entry: true)
     .bundle({ debug: true })
-
-
-    #(if report then bundle.pipe((require 'show-stream-progress')) else bundle)
-  bundle.pipe(mold.transformSourcesRelativeTo(path.dirname(bundlePath)))
+    .pipe(if report then showProgress() else through())
+    .pipe(mold.transformSourcesRelativeTo(path.dirname(bundlePath)))
 
 return if module.parent
 
