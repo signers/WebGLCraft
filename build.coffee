@@ -7,6 +7,7 @@ path         =  require 'path'
 showProgress =  require 'show-stream-progress'
 through      =  require 'through'
 bundlePath   =  path.join __dirname, 'public', 'bundle.js'
+externalMap  =  require './external-map'
 
 build = module.exports = (report = false) ->
   shim(browserify(), {
@@ -21,7 +22,8 @@ build = module.exports = (report = false) ->
     .require(require.resolve('./public/main'), entry: true)
     .bundle({ debug: true })
     .pipe(if report then showProgress() else through())
-    .pipe(mold.transformSourcesRelativeTo(path.dirname(bundlePath)))
+    #.pipe(mold.transformSourcesRelativeTo(path.dirname(bundlePath)))
+    .pipe(mold.transform externalMap)
 
 return if module.parent
 
