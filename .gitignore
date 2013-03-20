@@ -14,3 +14,5 @@ db
 
 node_modules
 bundle.js
+bundle.js.map
+stash.coffee
